@@ -11,3 +11,11 @@ ttf-victor-mono-nerd
 tmux
 neovim
 xclip
+thunar
+gvfs
+xarchiver
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+ristretto
+tumbler
