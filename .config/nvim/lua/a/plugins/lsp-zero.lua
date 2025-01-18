@@ -33,7 +33,7 @@ return {
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
-			{"L3MON4D3/LuaSnip"}
+			{ "L3MON4D3/LuaSnip" }
 		},
 		config = function()
 			-- Here is where you configure the autocompletion settings.
@@ -76,11 +76,12 @@ return {
 	-- LSP
 	{
 		"neovim/nvim-lspconfig",
-		cmd = {"LspInfo", "LspInstall", "LspStart"},
-		event = {"BufReadPre", "BufNewFile"},
+		cmd = { "LspInfo", "LspInstall", "LspStart" },
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
-			{"hrsh7th/cmp-nvim-lsp"},
-			{"williamboman/mason-lspconfig.nvim"}
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "williamboman/mason-lspconfig.nvim" },
+            { "WhoIsSethDaniel/mason-tool-installer.nvim" }
 		},
 		config = function()
 			-- This is where all the LSP shenanigans will live
@@ -99,7 +100,7 @@ return {
 
 			require("mason-lspconfig").setup(
 				{
-					ensure_installed = {},
+					ensure_installed = { "pyright" },
 					handlers = {
 						-- this first function is the "default handler"
 						-- it applies to every language server without a "custom handler"
@@ -116,6 +117,13 @@ return {
 					}
 				}
 			)
+
+            require("mason-tool-installer").setup({
+                ensure_installed = {
+                    "black",
+                    "isort"
+                }
+            })
 		end
 	}
 }

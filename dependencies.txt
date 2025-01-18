@@ -19,3 +19,5 @@ thunar-media-tags-plugin
 thunar-volman
 ristretto
 tumbler
+anaconda
+npm
