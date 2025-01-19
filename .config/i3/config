@@ -204,6 +204,7 @@ exec_always --no-startup-id picom
 exec_always --no-startup-id twmnd
 exec --no-startup-id xautolock -corners -000 -time 10 -locker "i3lock -c 000000" &
 exec --no-startup-id setxkbmap -option "ctrl:nocaps"
+exec --no-startup-id fcitx5
 
 # Border
 for_window [class="^.*"] border pixel 2
